@@ -132,7 +132,7 @@
 			flex-grow: 1;
 			display: block;
 		}
-	}	
+	}
 	.action-label{
 		@include small{
 			display: block;
@@ -274,7 +274,8 @@
 				border: 1px solid rgba($blue, 0.6);
 				display: inline-block;
 				color:rgba($blue, 0.8);
-				opacity: 0.5;
+				opacity: 1;
+				cursor: pointer;
 			}
 		}
 	}
