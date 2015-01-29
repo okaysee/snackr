@@ -171,6 +171,7 @@
   "display_name": "Display Name",
   "email": "Email",
   "bio": "Bio",
+  "update_avatar": "Update Avatar by signing up at Gravatar with Sols email",
   "twitter_username": "Twitter Username",
   "github_username": "GitHub Username",
   "site_url" : "Site URL",

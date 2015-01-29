@@ -1,6 +1,6 @@
 <template name="userAccount">
   <div class="grid-small grid-module dialog user-edit">
-  
+
   {{#if profileIncomplete}}
     <div>
       {{_ "please_complete_your_profile_below_before_continuing"}}
@@ -21,6 +21,9 @@
           <input id="email" name="email" disabled="disabled" type="text" value="{{email}}" />
         </div>
       </div> -->
+      <div class="control-group">
+        <a target="_blank" class="avatar-link" href="https://signup.wordpress.com/signup/?ref=oauth2&oauth2_redirect=79b45b162ac2ff5dda64b6cc01434a2a%40https%3A%2F%2Fpublic-api.wordpress.com%2Foauth2%2Fauthorize%2F%3Fclient_id%3D1854%26response_type%3Dcode%26blog_id%3D0%26state%3D90081c920a7ee7d8ec4843c4fc365732c86f0258968efe2507eb53f768e5d9d9%26redirect_uri%3Dhttps%253A%252F%252Fen.gravatar.com%252Fconnect%252F%253Faction%253Drequest_access_token%26jetpack-code%26jetpack-user-id%3D0%26action%3Doauth2-login&wpcom_connect=1">{{_ "update_avatar"}}</a>
+      </div>
       <div class="control-group">
         <label>{{_ "display_name"}}</label>
         <div class="controls">
