@@ -8,4 +8,13 @@
       <i class="icon-up action-icon"></i>
     </a>
   {{/if}}
+  {{#if downvoted}}
+  	<a class="downvote-link voted action" href="#" title="{{_ "downvoted"}}">
+  		<i class="icon-check action-icon"></i>
+	</a>
+  {{else}}
+  	<a class="downvote-link not-voted action" href="#" title="{{_ "downvote_"}}">
+  		<i class="icon-up action-icon"></i>
+  	</a>
+  {{/if}}
 </template>
