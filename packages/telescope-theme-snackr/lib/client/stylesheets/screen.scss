@@ -1,0 +1,22 @@
+body {
+	background: #EAEAEE;
+	font-family: "Roboto","Helvetica Neue",Helvetica, sans-serif;
+}
+
+.header {
+	background: #445566;
+}
+
+#submit, .button, .button.btn-primary, .btn.btn-primary, .btn.submit, .btn.submit:link, .button.btn-primary:link {
+	background: #7AFFEC;
+	color:#5e5e5e;
+}
+
+#submit:hover, .btn.btn-primary:hover {
+	background: #20D9BE;
+	color:#FFF;
+}
+
+.post-upvote .upvote-link {
+	color: rgba(221,52,22,0.8);
+}
