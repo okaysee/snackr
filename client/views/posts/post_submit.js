@@ -3,6 +3,16 @@ AutoForm.hooks({
 
     before: {
       submitPost: function(doc, template) {
+        // automatically check the 'all' checkbox
+        var allCategory = $('label:contains("All")').children().attr('value');
+
+        if (!doc.categories) {
+          doc.categories = [];
+        }
+
+        if (!_.contains(doc.categories, allCategory)) {
+          doc.categories.push(allCategory);
+        }
 
         template.$('button[type=submit]').addClass('loading');
 
