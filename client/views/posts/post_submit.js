@@ -15,7 +15,7 @@ AutoForm.hooks({
           doc.categories.push(allCategory);
         }
 
-        tempTitle = doc.title.toLowerCase();
+        tempTitle = doc.title ? doc.title.toLowerCase() : '';
 
         if (tempTitle.indexOf('non alcoholic') > -1 || tempTitle.indexOf('non-alcoholic') > -1 || tempTitle.indexOf('nonalcoholic') > -1){
           alert('WHAT IS WRONG WITH YOU? NO! -- ACCESS DENIED');
