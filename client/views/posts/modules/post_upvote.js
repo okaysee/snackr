@@ -24,17 +24,15 @@ Template[getTemplate('postUpvote')].events({
 
     if (upvoted) return;
 
-    if (!upvoted) {
-      Meteor.call('upvotePost', post, function(error, result){
-        trackEvent("post upvoted", {'_id': post._id});
-      });
-    }
+    Meteor.call('upvotePost', post, function(error, result){
+      trackEvent("post upvoted", {'_id': post._id});
+    });
 
-    if (downvoted) {
+    /*if (downvoted) {
       Meteor.call('cancelDownvotePost', post, function(error, result) {
         trackEvent('post downvote cancelled', {'_id': post._id});
       });
-    }
+    }*/
 
   },
   'click .downvote-link': function(e, instance) {
@@ -51,11 +49,11 @@ Template[getTemplate('postUpvote')].events({
 
     if (downvoted) return;
 
-    if (upvoted) {
+    /*if (upvoted) {
       Meteor.call('cancelUpvotePost', post, function(error, result) {
         trackEvent('post upvote cancelled', {'_id': post._id});
       });
-    }
+    }*/
 
     Meteor.call('downvotePost', post, function(error, result) {
         trackEvent('post downvoted', {'_id': post._id});
