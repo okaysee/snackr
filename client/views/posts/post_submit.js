@@ -15,7 +15,7 @@ AutoForm.hooks({
         }
 
         if (doc.title.indexOf('Non Alcoholic') > -1 ||doc.title.indexOf('Non-Alcoholic') > -1 || doc.title.indexOf('Non-alcoholic') > -1 || doc.title.indexOf('non-alcoholic') > -1 || doc.title.indexOf('non alcoholic') > -1 || doc.title.indexOf('Non alcoholic') > -1 ){
-          alert('WHYY??? NO!');
+          alert('WHAT IS WRONG WITH YOU? NO! -- ACCESS DENIED');
           return false;
         }
 
