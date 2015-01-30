@@ -4,7 +4,8 @@ AutoForm.hooks({
     before: {
       submitPost: function(doc, template) {
         // automatically check the 'all' checkbox
-        var allCategory = $('label:contains("All")').children().attr('value');
+        var allCategory = $('label:contains("All")').children().attr('value'),
+          tempTitle;
 
         if (!doc.categories) {
           doc.categories = [];
@@ -14,7 +15,9 @@ AutoForm.hooks({
           doc.categories.push(allCategory);
         }
 
-        if (doc.title.indexOf('Non Alcoholic') > -1 ||doc.title.indexOf('Non-Alcoholic') > -1 || doc.title.indexOf('Non-alcoholic') > -1 || doc.title.indexOf('non-alcoholic') > -1 || doc.title.indexOf('non alcoholic') > -1 || doc.title.indexOf('Non alcoholic') > -1 ){
+        tempTitle = doc.title.toLowerCase();
+
+        if (tempTitle.indexOf('non alcoholic') > -1 || tempTitle.indexOf('non-alcoholic') > -1 || tempTitle.indexOf('nonalcoholic') > -1){
           alert('WHAT IS WRONG WITH YOU? NO! -- ACCESS DENIED');
           return false;
         }
