@@ -33,8 +33,15 @@ var fillEmbedlyData = function (instance) {
         // remove loading class
         $thumbnailContainer.removeClass('loading');
 
-        if (!$titleField.val()) // if title field is empty, fill in title
-          $titleField.val(data.title);
+        if (!$titleField.val()) { // if title field is empty, fill in title
+          //check to see if title has amazon or freshdirect - if so, don't add that text to the Title field
+          if (data.title.search("FreshDirect")===0) 
+            $titleField.val(data.title.substr(14,data.title.length));
+          else if(data.title.search("Amazon.com")===0)
+            $titleField.val(data.title.substr(13,data.title.length));
+          else
+            $titleField.val(data.title);
+        }
         if (!$bodyField.val()) // if body field is empty, fill in body
           $bodyField.val(data.description);
         
